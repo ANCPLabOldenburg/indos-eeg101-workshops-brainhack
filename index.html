@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="INDoS and EEG101 OHBM BrainHack TrainTrack and workshop on interactive raw-to-BIDS curation with BIDS Manager and reproducible MEG/EEG quality control with MEEGqc."
+      content="INDoS and EEG101 COST Actions at OHBM BrainHack Bordeaux 2026: a two-half-day joint workshop of TrainTracks and Hacktracks on FAIR multimodal neuroimaging data, EEG standardisation, and open science."
     >
-    <title>INDoS and EEG101 TrainTrack and Workshop | BIDS Manager and MEEGqc</title>
+    <title>INDoS and EEG101 at OHBM BrainHack 2026 | Bordeaux, June 12 and 13</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -15,546 +15,1024 @@
       <div class="brand-group">
         <div class="brand-logos">
           <a class="brand-logo-link" href="https://www.indos-costaction.eu" target="_blank" rel="noopener" aria-label="Open the INDoS COST Action website">
-            <img class="brand-logo brand-logo-indos" src="assets/indos-logo-white.png" alt="INDoS COST Action">
+            <img class="brand-logo brand-logo-indos theme-only-dark" src="assets/indos-logo-white.png" alt="INDoS COST Action">
+            <img class="brand-logo brand-logo-indos theme-only-light" src="assets/indos-logo-black.png" alt="INDoS COST Action">
           </a>
           <a class="brand-logo-link" href="https://eeg101.eu/" target="_blank" rel="noopener" aria-label="Open the EEG101 COST Action website">
-            <img class="brand-logo brand-logo-eeg101" src="assets/eeg101-logo.png" alt="EEG101 COST Action">
+            <img class="brand-logo brand-logo-eeg101 theme-only-dark" src="assets/eeg101-logo-white.png" alt="EEG101 COST Action">
+            <img class="brand-logo brand-logo-eeg101 theme-only-light" src="assets/eeg101-logo-color.png" alt="EEG101 COST Action">
           </a>
         </div>
         <span class="brand-text">
-          <span>INDoS and EEG101 TrainTrack and Workshop</span>
-          <span class="brand-subtitle">OHBM BrainHack</span>
+          <span>INDoS and EEG101 at OHBM BrainHack 2026</span>
+          <span class="brand-subtitle">Bordeaux . June 12 and 13</span>
         </span>
       </div>
       <nav class="nav-links" aria-label="Page sections">
-        <a href="#programme">Programme</a>
-        <a href="#bids-manager">BIDS Manager</a>
-        <a href="#meegqc">MEEGqc</a>
-        <a href="#links">Links</a>
+        <button class="page-tab" type="button" data-page="home" aria-current="page">Home</button>
+        <button class="page-tab" type="button" data-page="programme">Programme</button>
+        <button class="page-tab" type="button" data-page="links">Links</button>
       </nav>
       <button class="theme-toggle" type="button" aria-pressed="false">Light theme</button>
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true">
-          <img class="hero-shot shot-a" src="assets/bids-manager/gui-visual.png" alt="">
-          <img class="hero-shot shot-b" src="assets/meegqc/gui-main-dark.png" alt="">
-          <img class="hero-shot shot-c" src="assets/bids-manager/scanned-metadata.png" alt="">
-          <img class="hero-shot shot-d" src="assets/meegqc/report-tabs.gif" alt="">
-          <img class="hero-shot shot-e" src="assets/bids-manager/slices.gif" alt="">
-          <img class="hero-shot shot-f" src="assets/meegqc/psd-topomap.gif" alt="">
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <svg class="workflow-animation workflow-graph" viewBox="0 0 880 230" role="button" tabindex="0" aria-label="Raw multimodal data to BIDS conversion, quality assessment, quality control, and reports. Click to highlight the workflow node by node.">
-            <defs>
-              <filter id="workflow-node-glow" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
-                <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#b8f46d" flood-opacity="0.72"></feDropShadow>
-                <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#4de3ff" flood-opacity="0.42"></feDropShadow>
-              </filter>
-              <filter id="workflow-dot-glow" x="-220%" y="-220%" width="540%" height="540%" color-interpolation-filters="sRGB">
-                <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.58"></feDropShadow>
-                <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#4de3ff" flood-opacity="0.7"></feDropShadow>
-              </filter>
-              <filter id="workflow-spotlight-glow" x="-180%" y="-180%" width="460%" height="460%" color-interpolation-filters="sRGB">
-                <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ffffff" flood-opacity="0.82"></feDropShadow>
-                <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#4de3ff" flood-opacity="0.7"></feDropShadow>
-              </filter>
-              <filter id="workflow-flash-glow" x="-220%" y="-220%" width="540%" height="540%" color-interpolation-filters="sRGB">
-                <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ffffff" flood-opacity="0.78"></feDropShadow>
-                <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#ff8b6b" flood-opacity="0.72"></feDropShadow>
-              </filter>
-              <filter id="workflow-brain-glow" x="-120%" y="-120%" width="340%" height="340%" color-interpolation-filters="sRGB">
-                <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#b8f46d" flood-opacity="0.72"></feDropShadow>
-                <feDropShadow dx="0" dy="0" stdDeviation="13" flood-color="#4de3ff" flood-opacity="0.58"></feDropShadow>
-                <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#ff8b6b" flood-opacity="0.34"></feDropShadow>
-              </filter>
-              <filter id="workflow-text-glow" x="-60%" y="-120%" width="220%" height="340%" color-interpolation-filters="sRGB">
-                <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.86"></feDropShadow>
-                <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#4de3ff" flood-opacity="0.62"></feDropShadow>
-              </filter>
-            </defs>
-            <path id="workflow-main-path" class="workflow-line main-line" d="M74 116 C150 44 230 44 306 116 S458 188 534 116 S694 44 812 116"></path>
-            <path id="workflow-audit-path" class="workflow-line audit-line" d="M72 116 C150 124 180 68 246 68 C282 68 304 88 326 112"></path>
-            <path id="workflow-qc-path" class="workflow-line qc-line" d="M536 116 C596 76 648 84 694 124 C728 153 766 149 812 116"></path>
-            <g class="workflow-mini-graph" aria-hidden="true">
-              <path d="M388 50 L432 34 L476 54 M388 50 L416 78 L476 54 M432 34 L416 78"></path>
-              <circle cx="388" cy="50" r="5"></circle>
-              <circle cx="432" cy="34" r="5"></circle>
-              <circle cx="476" cy="54" r="5"></circle>
-              <circle cx="416" cy="78" r="5"></circle>
-            </g>
-            <g class="workflow-node raw-node" transform="translate(38 78)">
-              <path class="node-icon" d="M4 16 h58 v52 H4z M4 16 l11 -12 h58 l-11 12 M16 32 h32 M16 46 h24"></path>
-              <text x="33" y="92"><tspan x="33">Raw multimodal</tspan><tspan x="33" dy="15">data</tspan></text>
-            </g>
-            <g class="workflow-node scan-node" transform="translate(212 28)">
-              <path class="node-icon" d="M0 8 h68 v54 H0z M11 23 h44 M11 36 h30 M11 49 h36 M52 47 l12 12 M56 41 a12 12 0 1 0 -1 0"></path>
-              <text x="34" y="90">Scan and inspect</text>
-            </g>
-            <g class="workflow-node bids-node" transform="translate(320 78)">
-              <path class="node-icon" d="M3 6 h64 v62 H3z M15 23 h38 M15 37 h38 M15 51 h27 M0 68 h70"></path>
-              <text x="35" y="96">BIDS conversion</text>
-            </g>
-            <g class="workflow-node assess-node" transform="translate(490 78)">
-              <path class="node-icon" d="M5 58 C17 17 50 17 62 58 M14 58 C27 40 41 40 53 58 M34 58 v-42 M19 24 l15 -13 l15 13"></path>
-              <text x="35" y="92"><tspan x="35">Quality assessment</tspan><tspan x="35" dy="15">Measure</tspan></text>
-            </g>
-            <g class="workflow-node control-node" transform="translate(630 136)">
-              <path class="node-icon" d="M4 8 h60 v52 H4z M17 25 l10 10 l23 -24 M17 47 h34"></path>
-              <text x="34" y="84"><tspan x="34">Quality control</tspan><tspan x="34" dy="15">Decision</tspan></text>
-            </g>
-            <g class="workflow-node report-node" transform="translate(786 78)">
-              <path class="node-icon" d="M0 0 h60 v68 H0z M13 17 h34 M13 32 h28 M13 47 h34 M43 0 v17 h17"></path>
-              <text x="30" y="96">Reports</text>
-            </g>
-            <circle class="travel-dot dot-main" r="5" filter="url(#workflow-dot-glow)"></circle>
-            <circle class="travel-dot dot-audit" r="4" filter="url(#workflow-dot-glow)"></circle>
-            <circle class="travel-dot dot-qc" r="4" filter="url(#workflow-dot-glow)"></circle>
-            <circle class="workflow-spotlight" r="17" filter="url(#workflow-spotlight-glow)"></circle>
-            <circle class="workflow-flash" r="10" filter="url(#workflow-flash-glow)"></circle>
-            <g class="click-brain stage-0" filter="url(#workflow-brain-glow)">
-              <circle class="click-brain-halo" r="30"></circle>
-              <image class="brain-image brain-start" href="assets/workflow/brain-start-white.png" x="-24" y="-24" width="48" height="48"></image>
-              <image class="brain-image brain-final" href="assets/workflow/brain-final-white.png" x="-24" y="-24" width="48" height="48"></image>
-            </g>
-            <text class="brainhack-pop" x="474" y="24" filter="url(#workflow-text-glow)">BrainHack</text>
-          </svg>
-          <p class="workflow-click-hint" aria-hidden="true">Click animation to play workflow</p>
-          <p class="eyebrow">INDoS and EEG101 workshops</p>
-          <h1 id="hero-title">From raw data to reproducible quality evidence</h1>
-          <p class="hero-copy">
-            Two COST Actions, one OHBM BrainHack day. INDoS (Improving Neuroimaging Data for Sharing) and EEG101
-            (Fundamentals of Open and Rigorous EEG Science) join TrainTracks and Hacktracks around a shared goal:
-            open, standards-based workflows that take raw MRI, MEG, and EEG into BIDS datasets and transparent
-            quality evidence.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#programme">Read programme</a>
-            <a class="button ghost" href="#links">Software links</a>
+      <!-- ============================ HOME ============================ -->
+      <section id="home" class="page-view page-view-home" data-page-view="home" aria-labelledby="hero-title">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-media" aria-hidden="true">
+            <img class="hero-shot shot-a" src="assets/bids-manager/gui-visual.png" alt="">
+            <img class="hero-shot shot-b" src="assets/meegqc/gui-main-dark.png" alt="">
+            <img class="hero-shot shot-c" src="assets/bids-manager/scanned-metadata.png" alt="">
+            <img class="hero-shot shot-d" src="assets/meegqc/report-tabs.gif" alt="">
+            <img class="hero-shot shot-e" src="assets/bids-manager/slices.gif" alt="">
+            <img class="hero-shot shot-f" src="assets/meegqc/psd-topomap.gif" alt="">
           </div>
-        </div>
-      </section>
-
-      <section id="programme" class="programme-section" aria-labelledby="programme-title">
-        <div class="section-heading">
-          <p class="section-kicker">TrainTrack and workshop programme</p>
-          <h2 id="programme-title">June 12th INDoS TrainTrack and workshop programme</h2>
-          <p>
-            The INDoS contribution is organized as two separate OHBM BrainHack activities. The morning activity is the
-            <strong>BIDS Manager TrainTrack</strong>, focused on multimodal raw-to-BIDS curation and conversion. The
-            afternoon activity is the <strong>MEEGqc workshop</strong>, focused on reproducible EEG and MEG quality
-            assessment and quality-control evidence.
-          </p>
-        </div>
-
-        <div class="programme-timeline" aria-label="June 12th programme timeline">
-          <article class="timeline-item timeline-bids">
-            <span class="timeline-time">June 12th morning</span>
-            <h3>BIDS Manager TrainTrack</h3>
-            <p>Preferred 1h30 Deeper TrainTrack on moving messy MRI, MEG, and EEG raw data into reusable BIDS datasets. A 45-minute fast-track format is available if the schedule needs a shorter slot.</p>
-          </article>
-          <article class="timeline-item timeline-meegqc">
-            <span class="timeline-time">June 12th afternoon</span>
-            <h3>MEEGqc workshop</h3>
-            <p>Practical EEG/MEG quality assessment and quality control with reports, derivatives, and transparent decision support.</p>
-          </article>
-        </div>
-
-        <div class="programme-group">
-          <div class="programme-group-heading">
-            <p class="section-kicker">June 12th morning</p>
-            <h3>BIDS Manager TrainTrack: data curation and conversion</h3>
-            <p>
-              Raw neuroimaging datasets are rarely clean when they leave the scanner or recording system. A single study
-              can contain MRI, MEG, and EEG acquisitions, repeated runs, unclear sessions, local sequence names, missing
-              metadata, and folders that do not map cleanly onto BIDS. This TrainTrack uses BIDS Manager as the practical
-              software layer for solving that problem. The preferred format is a 1h30 Deeper TrainTrack; the 45-minute
-              format is a lighter alternative if the schedule needs a shorter slot.
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <svg class="workflow-animation workflow-graph" viewBox="0 0 880 230" role="button" tabindex="0" aria-label="Raw multimodal data to BIDS conversion, quality assessment, quality control, and reports. Click to highlight the workflow node by node.">
+              <defs>
+                <filter id="workflow-node-glow" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+                  <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#b8f46d" flood-opacity="0.72"></feDropShadow>
+                  <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#4de3ff" flood-opacity="0.42"></feDropShadow>
+                </filter>
+                <filter id="workflow-dot-glow" x="-220%" y="-220%" width="540%" height="540%" color-interpolation-filters="sRGB">
+                  <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.58"></feDropShadow>
+                  <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#4de3ff" flood-opacity="0.7"></feDropShadow>
+                </filter>
+                <filter id="workflow-spotlight-glow" x="-180%" y="-180%" width="460%" height="460%" color-interpolation-filters="sRGB">
+                  <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ffffff" flood-opacity="0.82"></feDropShadow>
+                  <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#4de3ff" flood-opacity="0.7"></feDropShadow>
+                </filter>
+                <filter id="workflow-flash-glow" x="-220%" y="-220%" width="540%" height="540%" color-interpolation-filters="sRGB">
+                  <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ffffff" flood-opacity="0.78"></feDropShadow>
+                  <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#ff8b6b" flood-opacity="0.72"></feDropShadow>
+                </filter>
+                <filter id="workflow-brain-glow" x="-120%" y="-120%" width="340%" height="340%" color-interpolation-filters="sRGB">
+                  <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#b8f46d" flood-opacity="0.72"></feDropShadow>
+                  <feDropShadow dx="0" dy="0" stdDeviation="13" flood-color="#4de3ff" flood-opacity="0.58"></feDropShadow>
+                  <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#ff8b6b" flood-opacity="0.34"></feDropShadow>
+                </filter>
+                <filter id="workflow-text-glow" x="-60%" y="-120%" width="220%" height="340%" color-interpolation-filters="sRGB">
+                  <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.86"></feDropShadow>
+                  <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#4de3ff" flood-opacity="0.62"></feDropShadow>
+                </filter>
+              </defs>
+              <path id="workflow-main-path" class="workflow-line main-line" d="M74 116 C150 44 230 44 306 116 S458 188 534 116 S694 44 812 116"></path>
+              <path id="workflow-audit-path" class="workflow-line audit-line" d="M72 116 C150 124 180 68 246 68 C282 68 304 88 326 112"></path>
+              <path id="workflow-qc-path" class="workflow-line qc-line" d="M536 116 C596 76 648 84 694 124 C728 153 766 149 812 116"></path>
+              <g class="workflow-mini-graph" aria-hidden="true">
+                <path d="M388 50 L432 34 L476 54 M388 50 L416 78 L476 54 M432 34 L416 78"></path>
+                <circle cx="388" cy="50" r="5"></circle>
+                <circle cx="432" cy="34" r="5"></circle>
+                <circle cx="476" cy="54" r="5"></circle>
+                <circle cx="416" cy="78" r="5"></circle>
+              </g>
+              <g class="workflow-node raw-node" transform="translate(38 78)">
+                <path class="node-icon" d="M4 16 h58 v52 H4z M4 16 l11 -12 h58 l-11 12 M16 32 h32 M16 46 h24"></path>
+                <text x="33" y="92"><tspan x="33">Raw multimodal</tspan><tspan x="33" dy="15">data</tspan></text>
+              </g>
+              <g class="workflow-node scan-node" transform="translate(212 28)">
+                <path class="node-icon" d="M0 8 h68 v54 H0z M11 23 h44 M11 36 h30 M11 49 h36 M52 47 l12 12 M56 41 a12 12 0 1 0 -1 0"></path>
+                <text x="34" y="90">Scan and inspect</text>
+              </g>
+              <g class="workflow-node bids-node" transform="translate(320 78)">
+                <path class="node-icon" d="M3 6 h64 v62 H3z M15 23 h38 M15 37 h38 M15 51 h27 M0 68 h70"></path>
+                <text x="35" y="96">BIDS conversion</text>
+              </g>
+              <g class="workflow-node assess-node" transform="translate(490 78)">
+                <path class="node-icon" d="M5 58 C17 17 50 17 62 58 M14 58 C27 40 41 40 53 58 M34 58 v-42 M19 24 l15 -13 l15 13"></path>
+                <text x="35" y="92"><tspan x="35">Quality assessment</tspan><tspan x="35" dy="15">Measure</tspan></text>
+              </g>
+              <g class="workflow-node control-node" transform="translate(630 136)">
+                <path class="node-icon" d="M4 8 h60 v52 H4z M17 25 l10 10 l23 -24 M17 47 h34"></path>
+                <text x="34" y="84"><tspan x="34">Quality control</tspan><tspan x="34" dy="15">Decision</tspan></text>
+              </g>
+              <g class="workflow-node report-node" transform="translate(786 78)">
+                <path class="node-icon" d="M0 0 h60 v68 H0z M13 17 h34 M13 32 h28 M13 47 h34 M43 0 v17 h17"></path>
+                <text x="30" y="96">Reports</text>
+              </g>
+              <circle class="travel-dot dot-main" r="5" filter="url(#workflow-dot-glow)"></circle>
+              <circle class="travel-dot dot-audit" r="4" filter="url(#workflow-dot-glow)"></circle>
+              <circle class="travel-dot dot-qc" r="4" filter="url(#workflow-dot-glow)"></circle>
+              <circle class="workflow-spotlight" r="17" filter="url(#workflow-spotlight-glow)"></circle>
+              <circle class="workflow-flash" r="10" filter="url(#workflow-flash-glow)"></circle>
+              <g class="click-brain stage-0" filter="url(#workflow-brain-glow)">
+                <circle class="click-brain-halo" r="30"></circle>
+                <image class="brain-image brain-start" href="assets/workflow/brain-start-white.png" x="-24" y="-24" width="48" height="48"></image>
+                <image class="brain-image brain-final" href="assets/workflow/brain-final-white.png" x="-24" y="-24" width="48" height="48"></image>
+              </g>
+              <text class="brainhack-pop" x="474" y="24" filter="url(#workflow-text-glow)">BrainHack</text>
+            </svg>
+            <p class="workflow-click-hint" aria-hidden="true">Click animation to play workflow</p>
+            <p class="eyebrow">INDoS . EEG101 . OHBM BrainHack Bordeaux 2026</p>
+            <h1 id="hero-title">Two COST Actions, two half-days, one open neuroimaging chain</h1>
+            <p class="hero-copy">
+              INDoS and EEG101 join forces at OHBM BrainHack Bordeaux to deliver a joint two-half-day workshop on
+              FAIR multimodal neuroimaging data, EEG reporting standards, dataset harmonisation, and the EEG
+              Community Framework for ethical, open, and sustainable EEG science. Two TrainTracks (INDoS), three
+              EEG101 working-group sessions, and three parallel Hacktracks share the same two rooms across
+              Friday afternoon and Saturday morning.
             </p>
-          </div>
-
-          <div class="programme-pair">
-          <article class="programme-card featured-session">
-            <div class="programme-meta">
-              <span>June 12th morning</span>
-              <span>Deeper TrainTrack</span>
-              <span>1h30</span>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button primary" href="#programme" data-page-link="programme">See programme</a>
+              <a class="button ghost" href="#links" data-page-link="links">Links</a>
             </div>
-            <h3>Multimodal raw-to-BIDS curation and conversion with BIDS Manager</h3>
-            <p class="tutor-line"><strong>Tutors:</strong> Dr. Karel López Vilaret and Dr. Jorge F. Bosch-Bayard</p>
-            <p class="programme-pitch">
-              Short description: A hands-on session about the practical problem of turning heterogeneous raw MRI, MEG,
-              and EEG acquisitions into structured BIDS datasets. Participants learn how acquisition metadata, repeated
-              runs, subject/session labels, sequence names, inclusion decisions, and conversion settings can be inspected
-              before conversion instead of being discovered only after something breaks downstream.
-            </p>
-            <p class="programme-summary">
-              This session is for participants who want to test the software and understand the full workflow behind
-              reproducible data organization: scan raw data, inspect acquisition structure, correct curation decisions,
-              preview BIDS names and folders, run conversion, and review the resulting dataset.
-            </p>
-            <p>
-              BIDS Manager is introduced as the practical answer to this curation bottleneck: a multimodal raw-to-BIDS
-              conversion tool that supports MRI, MEG, and EEG workflows in one framework. It converts raw data into
-              BIDS-compliant outputs using a metadata inventory, conversion heuristics, preview logic, and live conversion
-              logs. Before conversion, participants can inspect studies, subjects, sessions, source folders, sequences,
-              acquisition times, file counts, series identifiers, repeated runs, inferred modalities, proposed BIDS names,
-              suffix-dictionary mappings, include/exclude filters, and subject/session naming corrections.
-            </p>
-            <h4>Learning objectives</h4>
-            <ul>
-              <li>Understand why multimodal raw-to-BIDS conversion is a curation problem, not only a renaming task.</li>
-              <li>Understand BIDS Manager as both a raw-to-BIDS conversion tool and a curation environment for MRI, MEG, and EEG workflows.</li>
-              <li>Scan raw acquisitions and interpret the subject_summary metadata inventory.</li>
-              <li>Use suffix dictionaries, filters, repeat detection, and naming controls to curate data before conversion.</li>
-              <li>Preview the future BIDS structure, run conversion, and understand the generated outputs and logs.</li>
-              <li>Connect conversion choices to downstream validation, sharing, quality assessment, and reproducibility.</li>
-            </ul>
-            <p class="target-line">
-              <strong>Target audience:</strong> Beginner to intermediate participants who want to test the software and
-              learn a practical, software-supported route from raw data to a reusable BIDS dataset.
-            </p>
-            <p class="tag-line">Tags: BIDS · raw-to-BIDS · conversion · data curation · DICOM · metadata · MRI · MEG · EEG · reproducibility</p>
-          </article>
+          </div>
+        </section>
 
-          <article class="programme-card secondary-session">
-            <div class="programme-meta">
-              <span>June 12th morning</span>
-              <span>Fast-track TrainTrack option</span>
-              <span>45 minutes</span>
+        <section class="home-section" aria-labelledby="actions-title">
+          <div class="container">
+            <p class="section-kicker">The two COST Actions behind the workshop</p>
+            <h2 id="actions-title">Two pan-European Actions, one shared goal</h2>
+            <div class="action-pair">
+              <article class="action-card">
+                <header>
+                  <span class="action-logo-wrap">
+                    <img class="action-logo theme-only-dark" src="assets/indos-logo-white.png" alt="INDoS logo">
+                    <img class="action-logo theme-only-light" src="assets/indos-logo-black.png" alt="INDoS logo">
+                  </span>
+                  <div>
+                    <p class="action-eyebrow">COST Action CA24161</p>
+                    <h3>INDoS . Improving Neuroimaging Data for Sharing</h3>
+                  </div>
+                </header>
+                <p>
+                  INDoS connects researchers, software developers, data stewards, and legal experts across Europe
+                  to make multimodal neuroimaging data (MRI, MEG, EEG) <strong>Findable, Accessible,
+                  Interoperable, and Reusable</strong>. The Action develops shared quality-assessment guidelines,
+                  metadata standards, preprocessing conventions, and ethical-legal guidance for responsible data
+                  sharing.
+                </p>
+                <ul class="action-bullets">
+                  <li>Data quality standards across MRI, MEG, and EEG</li>
+                  <li>Improved metadata for discoverability</li>
+                  <li>Documented preprocessing for reproducibility</li>
+                  <li>Practical ethical-legal guidance for sharing</li>
+                  <li>Pan-European training and capacity building</li>
+                </ul>
+                <p class="action-cta">
+                  <a class="action-link" href="https://www.indos-costaction.eu" target="_blank" rel="noopener noreferrer">indos-costaction.eu</a>
+                </p>
+              </article>
+
+              <article class="action-card">
+                <header>
+                  <span class="action-logo-wrap">
+                    <img class="action-logo theme-only-dark" src="assets/eeg101-logo-white.png" alt="EEG101 logo">
+                    <img class="action-logo theme-only-light" src="assets/eeg101-logo-color.png" alt="EEG101 logo">
+                  </span>
+                  <div>
+                    <p class="action-eyebrow">COST Action . EEG community</p>
+                    <h3>EEG101 . Fundamentals of open and rigorous EEG science</h3>
+                  </div>
+                </header>
+                <p>
+                  EEG101 unites the EEG community to reduce methodological inconsistencies through shared
+                  reporting standards, harmonised datasets, FAIR-compliant infrastructure, and the
+                  <strong>EEG Community Framework</strong> for ethical, open, and sustainable EEG science.
+                  Particular emphasis goes to early-career and underrepresented researchers.
+                </p>
+                <ul class="action-bullets">
+                  <li>WG1 . Reporting standards (ARTEM-IS)</li>
+                  <li>WG2 . Data curation and harmonisation (RS-BIDSify, FAIR datasets)</li>
+                  <li>WG3 . The EEG Community Framework (ethics, openness, sustainability)</li>
+                  <li>Short-Term Scientific Missions and Virtual Mobility Grants</li>
+                  <li>Summer Schools and open-access training materials</li>
+                </ul>
+                <p class="action-cta">
+                  <a class="action-link" href="https://eeg101.eu/" target="_blank" rel="noopener noreferrer">eeg101.eu</a>
+                </p>
+              </article>
             </div>
-            <h3>Fast-track BIDS curation and conversion with BIDS Manager</h3>
-            <p class="tutor-line"><strong>Tutors:</strong> Dr. Karel López Vilaret and Dr. Jorge F. Bosch-Bayard</p>
-            <p class="programme-pitch">
-              Short description: A concise introduction to the curation decisions that make raw-to-BIDS conversion hard
-              in real MRI, MEG, and EEG datasets, followed by a compact demonstration of how BIDS Manager scans raw data,
-              exposes acquisition and organization problems, previews the future BIDS dataset, and runs conversion.
+          </div>
+        </section>
+
+        <section class="home-section home-section-alt" aria-labelledby="workshop-title">
+          <div class="container">
+            <p class="section-kicker">What the workshop is made of</p>
+            <h2 id="workshop-title">TrainTracks and Hacktracks across two half-days</h2>
+            <p class="section-lead">
+              The OHBM BrainHack 2026 contribution from INDoS and EEG101 is one joint workshop made of two
+              session formats. <strong>TrainTracks</strong> are short, focused training slots that turn a tool or
+              standard into something attendees can apply right after the session. <strong>Hacktracks</strong>
+              are multi-day projects that run across the three BrainHack days (June 11, 12, 13) and welcome
+              hands-on contributions.
             </p>
-            <p class="programme-summary">
-              This is the compact version of the morning BIDS Manager TrainTrack. It covers the same multimodal conversion
-              logic but focuses on the essential steps rather than extended hands-on practice.
+
+            <div class="format-grid">
+              <article class="format-card">
+                <h3>TrainTracks</h3>
+                <p class="format-meta">Short . focused . hands-on</p>
+                <p>
+                  Two INDoS TrainTracks anchor the workshop: a Friday-afternoon BIDS Manager training on
+                  multimodal raw-to-BIDS curation, and a Saturday-morning MEEGqc training on reproducible MEG/EEG
+                  quality assessment and control. EEG101 contributes a Community Framework introduction
+                  TrainTrack on Friday and an Ambassador TrainTrack on Saturday.
+                </p>
+              </article>
+              <article class="format-card">
+                <h3>Workshops and discussions</h3>
+                <p class="format-meta">Tools . standards . community</p>
+                <p>
+                  EEG101 WG1 runs the ARTEM-IS demo and a journals-implementation discussion on Friday. EEG101
+                  WG2 runs the RS-BIDSify curation workshop on Friday and the harmonisation community debate on
+                  Saturday. INDoS and EEG101 also share a joint &quot;all together&quot; slot on Friday between
+                  the afternoon sessions.
+                </p>
+              </article>
+              <article class="format-card">
+                <h3>Hacktracks</h3>
+                <p class="format-meta">3 days . collaborative . cross-hub</p>
+                <p>
+                  Three parallel EEG101 Hacktracks run across June 11 to 13: the ARTEM-IS Lexicon of EEG
+                  terminology (WG1), the Community Framework Teaching and Gamification brainstorm (WG3), and the
+                  Community Framework Stakeholder Mapping project (WG3). All accept new contributors throughout
+                  the BrainHack.
+                </p>
+              </article>
+            </div>
+
+            <p class="home-section-foot">
+              <a class="button primary" href="#programme" data-page-link="programme">Open the full programme</a>
             </p>
+          </div>
+        </section>
+      </section>
+
+      <!-- ============================ PROGRAMME ============================ -->
+      <section id="programme" class="page-view page-view-programme" data-page-view="programme" hidden aria-labelledby="programme-title">
+        <aside class="page-toc" data-toc aria-label="Page navigation">
+          <button class="page-toc-toggle" type="button" aria-expanded="false" aria-controls="page-toc-panel" aria-label="Toggle on-page navigation">
+            <span class="toc-bars"><span></span><span></span><span></span></span>
+          </button>
+          <nav id="page-toc-panel" class="page-toc-panel" aria-label="On this page">
+            <span class="page-toc-title">On this page</span>
+            <a class="page-toc-link" href="#schedule"><span class="page-toc-dot"></span> Schedule</a>
+            <a class="page-toc-link" href="#indos"><span class="page-toc-dot"></span> INDoS TrainTracks</a>
+            <a class="page-toc-link" href="#wg1"><span class="page-toc-dot"></span> EEG101 WG1 . ARTEM-IS</a>
+            <a class="page-toc-link" href="#wg2"><span class="page-toc-dot"></span> EEG101 WG2 . RS-BIDSify</a>
+            <a class="page-toc-link" href="#wg3"><span class="page-toc-dot"></span> EEG101 WG3 . Community Framework</a>
+            <a class="page-toc-link" href="#cost-note"><span class="page-toc-dot"></span> EEG101 membership note</a>
+          </nav>
+        </aside>
+
+        <div class="programme-section">
+          <div class="container">
+            <p class="section-kicker">Programme . June 12 and 13, 2026</p>
+            <h2 id="programme-title">Joint programme at OHBM BrainHack Bordeaux</h2>
+            <p class="section-lead">
+              Two COST Actions, two half-days, four parallel tracks. Click any cell in the schedule to jump to
+              the corresponding session description.
+            </p>
+          </div>
+
+          <div id="schedule" class="container schedule-wrapper" aria-label="Two-day schedule for INDoS and EEG101">
+            <table class="schedule-table">
+              <caption class="visually-hidden">Friday 12 June and Saturday 13 June schedule across Room 1 and Room 2.</caption>
+              <thead>
+                <tr>
+                  <th scope="col" class="col-time">Time</th>
+                  <th scope="col">Room 1</th>
+                  <th scope="col">Room 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="schedule-day-row">
+                  <th scope="rowgroup" colspan="3">Friday, June 12, 2026</th>
+                </tr>
+                <tr>
+                  <th scope="row" class="col-time">
+                    <span class="time-span">13:30 - 15:30</span>
+                    <span class="time-duration">2 h</span>
+                  </th>
+                  <td class="cell-eeg101">
+                    <a class="cell-link" href="#session-artemis-demo">
+                      <span class="cell-tag tag-wg1">EEG101 . WG1</span>
+                      <strong>ARTEM-IS walk-through</strong>
+                    </a>
+                    <a class="cell-link cell-link-sub" href="#session-cortex">
+                      <span class="cell-tag tag-wg1">EEG101 . WG1</span>
+                      <strong>Implementation of new standards in journals</strong>
+                    </a>
+                  </td>
+                  <td class="cell-indos">
+                    <a class="cell-link" href="#session-bidsmanager">
+                      <span class="cell-tag tag-indos">INDoS . TrainTrack</span>
+                      <strong>Data curation workshop: BIDS Manager</strong>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="col-time">
+                    <span class="time-span">15:30 - 16:30</span>
+                    <span class="time-duration">1 h</span>
+                  </th>
+                  <td class="cell-both" colspan="2">
+                    <span class="cell-tag tag-eeg101">EEG101 . joint</span>
+                    <strong>EEG101 all together</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="col-time">
+                    <span class="time-span">16:30 - 17:00</span>
+                    <span class="time-duration">30 min</span>
+                  </th>
+                  <td class="cell-break" colspan="2">Coffee break</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="col-time">
+                    <span class="time-span">17:00 - 18:30</span>
+                    <span class="time-duration">1 h 30</span>
+                  </th>
+                  <td class="cell-eeg101">
+                    <a class="cell-link" href="#session-cf-intro">
+                      <span class="cell-tag tag-wg3">EEG101 . WG3</span>
+                      <strong>EEG Community Framework: presentation and discussion</strong>
+                    </a>
+                  </td>
+                  <td class="cell-eeg101">
+                    <a class="cell-link" href="#session-rsbidsify">
+                      <span class="cell-tag tag-wg2">EEG101 . WG2</span>
+                      <strong>Data curation workshop: RS-BIDSify</strong>
+                    </a>
+                  </td>
+                </tr>
+                <tr class="schedule-day-row">
+                  <th scope="rowgroup" colspan="3">Saturday, June 13, 2026</th>
+                </tr>
+                <tr>
+                  <th scope="row" class="col-time">
+                    <span class="time-span">09:00 - 10:30</span>
+                    <span class="time-duration">1 h 30</span>
+                  </th>
+                  <td class="cell-open">Open slot</td>
+                  <td class="cell-indos">
+                    <a class="cell-link" href="#session-meegqc">
+                      <span class="cell-tag tag-indos">INDoS . TrainTrack</span>
+                      <strong>Quality control workshop: MEEGqc</strong>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="col-time">
+                    <span class="time-span">10:30 - 12:00</span>
+                    <span class="time-duration">1 h 30</span>
+                  </th>
+                  <td class="cell-eeg101">
+                    <a class="cell-link" href="#session-ambassador">
+                      <span class="cell-tag tag-wg3">EEG101 . WG3</span>
+                      <strong>Ambassador TrainTrack</strong>
+                    </a>
+                  </td>
+                  <td class="cell-eeg101">
+                    <a class="cell-link" href="#session-debate">
+                      <span class="cell-tag tag-wg2">EEG101 . WG2</span>
+                      <strong>Debate: harmonisation and standardisation in EEG research</strong>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="schedule-footnote">
+              Room and time assignments follow the joint INDoS/EEG101 plan for OHBM BrainHack Bordeaux 2026
+              (Campus Victoire, University of Bordeaux). Three Hacktracks run across the three BrainHack days
+              (June 11 to 13) alongside the workshops below.
+            </p>
+          </div>
+
+          <article class="programme-block programme-indos" id="indos">
+            <header class="programme-block-head">
+              <p class="block-kicker">INDoS</p>
+              <h3>INDoS TrainTracks: from raw data to reproducible quality evidence</h3>
+              <p>
+                The INDoS contribution is a coherent raw-data-to-quality-evidence chain. The Friday afternoon
+                training takes raw multimodal data into BIDS-compliant datasets with BIDS Manager. The Saturday
+                morning training turns those datasets into reproducible quality assessment and quality-control
+                outputs with MEEGqc.
+              </p>
+            </header>
+
+            <article id="session-bidsmanager" class="programme-card featured-session">
+              <div class="programme-meta">
+                <span>Friday, June 12 . 13:30 - 15:30 . Room 2</span>
+                <span>INDoS TrainTrack</span>
+                <span>Beginner-friendly . 90 min</span>
+              </div>
+              <h3>Making raw-to-BIDS less painful: multimodal conversion and curation with BIDS Manager</h3>
+              <p class="tutor-line"><strong>Tutors:</strong> Dr. Karel L&oacute;pez Vilaret and Dr. Jorge F. Bosch-Bayard . ANCP Lab, University of Oldenburg</p>
+              <p class="programme-pitch">
+                A practical bridge between BIDS concepts and real-world data conversion. Many researchers
+                understand the value of BIDS, but the step from chaotic raw data to a clean BIDS dataset can
+                still be difficult, fragmented, and highly manual.
+              </p>
+              <p>
+                BIDS Manager is a specialised GUI-driven software for interactive raw-to-BIDS conversion and
+                curation across MRI, MEG, and EEG datasets. It scans raw acquisitions into an inventory, detects
+                metadata and organisation issues, supports suffix mapping, handles repeated runs, previews the
+                future BIDS structure, and connects conversion decisions with validation.
+              </p>
+              <h4>What this training provides</h4>
+              <ul>
+                <li>A short introduction to BIDS: why consistent naming, metadata, folder structure, and validation matter for downstream analysis, sharing, and reproducibility.</li>
+                <li>A practical introduction to BIDS Manager: scan raw acquisitions, detect metadata and organisation issues, apply suffix mapping, handle repeated runs, preview the future BIDS structure, connect conversion decisions with validation.</li>
+                <li>A hands-on multimodal raw-to-BIDS workflow on example MRI, MEG, and EEG datasets: inspect raw inputs, make curation decisions, run conversion, check the generated BIDS structure, review the output.</li>
+              </ul>
+              <p class="target-line">
+                <strong>Target audience:</strong> Beginner-friendly. Researchers who want a software-supported
+                route from raw multimodal data to a reusable BIDS dataset.
+              </p>
+              <p class="tag-line">Tags: BIDS . raw-to-BIDS . data curation . metadata . MRI . MEG . EEG . reproducibility . neuroimaging . GUI . validation</p>
+              <div class="programme-links" aria-label="Resources for the BIDS Manager TrainTrack">
+                <a class="programme-link" href="https://ancplaboldenburg.github.io/bids_manager_documentation/" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Tool</span><span class="programme-link-target">BIDS Manager documentation</span>
+                </a>
+                <a class="programme-link" href="https://github.com/ANCPLabOldenburg/BIDS-Manager" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Repo</span><span class="programme-link-target">ANCPLabOldenburg/BIDS-Manager</span>
+                </a>
+                <a class="programme-link" href="https://github.com/ohbm/hackathon2026/issues/28" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">OHBM</span><span class="programme-link-target">TrainTrack #28</span>
+                </a>
+              </div>
+            </article>
+
+            <article id="session-meegqc" class="programme-card featured-session">
+              <div class="programme-meta">
+                <span>Saturday, June 13 . 09:00 - 10:30 . Room 2</span>
+                <span>INDoS TrainTrack</span>
+                <span>Intermediate . 90 min</span>
+              </div>
+              <h3>MEEGqc: a standardised framework for MEG and EEG quality assessment and control</h3>
+              <p class="tutor-line"><strong>Tutors:</strong> Dr. Karel L&oacute;pez Vilaret and Dr. Jorge F. Bosch-Bayard . ANCP Lab, University of Oldenburg</p>
+              <p class="programme-pitch">
+                A BIDS-aligned Python toolbox for standardised quality assessment (QA) and explicit quality
+                control (QC) of MEG and EEG data. Beginners learn the basic logic of reproducible MEG/EEG QA/QC;
+                more advanced users see how MEEGqc structures quality metrics, interactive HTML reports, and
+                machine-readable derivatives across subject-level and dataset-level outputs.
+              </p>
+              <h4>What this training provides</h4>
+              <ul>
+                <li>A conceptual introduction to MEG/EEG data quality, focused on why physiological, environmental, hardware, and motion-related noise make standardised and transparent QA/QC workflows necessary.</li>
+                <li>A practical introduction to MEEGqc: how to run the toolbox through the graphical user interface (GUI), the command-line interface (CLI), and the Python interface, and how to inspect its generated quality metrics and interactive HTML reports.</li>
+                <li>A reproducible MEG/EEG quality workflow: subject-level reports, dataset-level summaries, and machine-readable derivatives that can help reduce subjective and fragmented manual quality-control practices.</li>
+              </ul>
+              <p class="target-line">
+                <strong>Target audience:</strong> Intermediate. Researchers interested in transparent, scalable,
+                and reproducible QA/QC workflows for EEG and MEG data.
+              </p>
+              <p class="tag-line">Tags: MEEGqc . MEG . EEG . quality assessment . quality control . QA/QC . BIDS . Python . reproducibility . neuroimaging . data quality . open science</p>
+              <div class="programme-links" aria-label="Resources for the MEEGqc TrainTrack">
+                <a class="programme-link" href="https://ancplaboldenburg.github.io/megqc_documentation/" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Tool</span><span class="programme-link-target">MEEGqc documentation</span>
+                </a>
+                <a class="programme-link" href="https://github.com/ANCPLabOldenburg/MEGqc" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Repo</span><span class="programme-link-target">ANCPLabOldenburg/MEGqc</span>
+                </a>
+                <a class="programme-link" href="https://github.com/ohbm/hackathon2026/issues/43" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">OHBM</span><span class="programme-link-target">TrainTrack #43</span>
+                </a>
+              </div>
+            </article>
+          </article>
+
+          <article class="programme-block programme-wg1" id="wg1">
+            <header class="programme-block-head">
+              <p class="block-kicker">EEG101 . Working Group 1</p>
+              <h3>ARTEM-IS: structured reporting for EEG methodology</h3>
+              <p>
+                ARTEM-IS (Agreed Reporting Template for EEG Methodology, International Standard) is an open,
+                interactive web application that guides researchers through structured reporting of their EEG
+                (currently ERP) methods, producing standardised, machine-readable outputs alongside human-readable
+                methodological summaries. Built by an international working group under the INCF and developed
+                further within EEG101 WG1, the current version (v2.1) covers the full ERP pipeline across nine
+                sections and roughly 460 items, of which a subset tailored to each study is presented to users.
+                Outputs can be attached to manuscripts, preregistrations, or shared datasets.
+              </p>
+              <p class="tutor-line"><strong>WG1 lead:</strong> Vanja Kovi&#263; (University of Belgrade) . <strong>Co-lead:</strong> An&#273;ela &#352;o&#353;ki&#263; (University of Belgrade)</p>
+            </header>
+
+            <article id="session-artemis-demo" class="programme-card">
+              <div class="programme-meta">
+                <span>Friday, June 12 . 13:30 - 14:20 . Room 1</span>
+                <span>EEG101 . WG1 workshop</span>
+              </div>
+              <h3>ARTEM-IS Demo</h3>
+              <p class="tutor-line"><strong>Leads:</strong> An&#273;ela &#352;o&#353;ki&#263; and Vanja Kovi&#263; (EEG101 WG1), with Nastassja L. Fischer (online)</p>
+              <p>
+                A hands-on workshop introducing ARTEM-IS, the ARTEM-IS for ERP standard contents, the web
+                application, the outputs it produces, and how it fits into existing reporting and data-sharing
+                workflows. ERP researchers leave with something they can apply to their next manuscript or
+                preregistration immediately. EEG researchers working outside the ERP tradition are equally welcome:
+                a core aim of the session is to open doors to extending ARTEM-IS to other EEG paradigms and methods.
+              </p>
+              <p>
+                The session closes with a workshop materials bundle (slides, worked examples of ARTEM-IS
+                documentation, supporting resources) so that participants who find the tool useful can run their
+                own ARTEM-IS workshop in their lab, plus information on how to join EEG101 COST Action WG1.
+              </p>
+              <p class="target-line"><strong>Target audience:</strong> ERP and broader EEG researchers, authors, reviewers, and anyone interested in structured EEG reporting.</p>
+              <p class="tag-line">Tags: ARTEM-IS . EEG . ERP . reporting standards . open science . INCF</p>
+              <div class="programme-links" aria-label="Resources for the ARTEM-IS demo">
+                <a class="programme-link" href="https://artemis.incf.org/" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Tool</span><span class="programme-link-target">ARTEM-IS web application</span>
+                </a>
+                <a class="programme-link" href="https://onlinelibrary.wiley.com/doi/10.1111/psyp.70187" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Paper</span><span class="programme-link-target">Psychophysiology, 2024</span>
+                </a>
+                <a class="programme-link" href="https://incf.org/" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Host</span><span class="programme-link-target">INCF</span>
+                </a>
+              </div>
+            </article>
+
+            <article id="session-cortex" class="programme-card">
+              <div class="programme-meta">
+                <span>Friday, June 12 . 14:30 - 15:30 . Room 1</span>
+                <span>EEG101 . WG1 session</span>
+              </div>
+              <h3>Implementation of new standards in journals</h3>
+              <p class="tutor-line"><strong>Speakers:</strong> Robert McIntosh (Editor-in-Chief, <em>Cortex</em>), Heinrich Liesefeld (<em>Cortex</em> Associate Editor for EEG papers), with members of EEG101 Working Groups</p>
+              <p>
+                This session brings the editorial perspective into the conversation on EEG reporting standards.
+                Robert McIntosh gives a 20-minute talk on integrating ARTEM-IS into <em>Cortex</em> and on his
+                broader perspective on introducing new reporting practices into the journal. A discussion follows,
+                joined by Heinrich Liesefeld and members of EEG101 Working Groups, exploring what it takes for
+                journal-level adoption of structured reporting to work in practice. The floor will be open to
+                attendees; contributions from those with editorial experience at other journals are especially
+                welcome.
+              </p>
+              <p class="target-line"><strong>Target audience:</strong> Editors, reviewers, and researchers interested in journal-level adoption of reporting standards.</p>
+              <p class="tag-line">Tags: EEG . reporting standards . journals . editorial . ARTEM-IS . open science</p>
+              <div class="programme-links" aria-label="Resources for the journals session">
+                <a class="programme-link" href="https://www.sciencedirect.com/journal/cortex" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Journal</span><span class="programme-link-target">Cortex</span>
+                </a>
+                <a class="programme-link" href="https://artemis.incf.org/" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Standard</span><span class="programme-link-target">ARTEM-IS</span>
+                </a>
+              </div>
+            </article>
+
+            <article id="hacktrack-lexicon" class="programme-card programme-hacktrack">
+              <div class="programme-meta">
+                <span>Hacktrack . 3 days (June 11 to 13)</span>
+                <span>EEG101 . WG1</span>
+                <span>Hybrid: Bordeaux, Asia/Pacific, Europe/Middle East/Africa</span>
+              </div>
+              <h3>ARTEM-IS Lexicon of EEG terminology</h3>
+              <p class="tutor-line"><strong>Project leads:</strong> Nastassja L. Fischer (online), An&#273;ela &#352;o&#353;ki&#263; (onsite), Vanja Kovi&#263; (onsite)</p>
+              <p>
+                Work on the ARTEM-IS Lexicon: a curated, definition-backed glossary of EEG terms used in the
+                ARTEM-IS reporting template. The work focuses on extracting and consolidating the list of
+                EEG-specific terms currently used in the template, mapping them where possible to definitions in
+                existing neuroscientific lexicons and ontologies, and drafting community-sourced definitions for
+                the terms that fall outside the scope of existing resources.
+              </p>
+              <p>
+                The longer-term aim is a searchable and published EEG lexicon interoperable with the broader
+                landscape of neuroscientific terminology. The primary purpose is to give ARTEM-IS users in-place
+                definitions as they fill in their methods reports, turning ARTEM-IS into a training resource
+                rather than only a reporting standard.
+              </p>
+              <p class="target-line">
+                <strong>Skills welcome:</strong> any combination of EEG methods expertise, terminology or
+                ontology experience, technical writing skills, or interest in research infrastructure. No prior
+                involvement with ARTEM-IS is required.
+              </p>
+              <p><strong>Introductory hybrid meeting:</strong> Thursday, June 11, 13:30 (CEST).</p>
+              <p class="tag-line">Tags: ARTEM-IS . EEG . terminology . ontology . lexicon . machine-readable . open science</p>
+              <div class="programme-links" aria-label="Resources for the ARTEM-IS Lexicon Hacktrack">
+                <a class="programme-link" href="https://artemis.incf.org/" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Tool</span><span class="programme-link-target">ARTEM-IS web application</span>
+                </a>
+                <a class="programme-link" href="https://github.com/ohbm/hackathon2026/issues/36" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">OHBM</span><span class="programme-link-target">Hacktrack #36</span>
+                </a>
+              </div>
+            </article>
+
+            <article id="hacktrack-stresstest" class="programme-card programme-hacktrack">
+              <div class="programme-meta">
+                <span>Hacktrack . 3 days (June 11 to 13)</span>
+                <span>EEG101 . WG1</span>
+              </div>
+              <h3>Stress-testing ARTEM-IS web application and standard</h3>
+              <p class="tutor-line"><strong>Coordinated with:</strong> the ARTEM-IS development team (EEG101 WG1)</p>
+              <p>
+                ARTEM-IS has been used and refined by members of the development team, but it has not yet been
+                extensively evaluated by external ERP researchers who were not involved in its development. This
+                hackathon track is a first step in that direction. ERP researchers willing to set aside time
+                during the hackathon will register on the platform, explore its functionality, and complete one
+                full ARTEM-IS report from start to finish, either based on their own work or on a published study
+                of their choice.
+              </p>
+              <p>
+                Participants then provide feedback on both layers of the project: the usability of the web
+                application (navigation, interface, friction points, missing affordances) and the usability of
+                the standard itself (item wording, scope, granularity, gaps, terms or concepts that were unclear
+                or hard to map onto their study). The aim is to gather a concentrated batch of real-use feedback
+                to guide the next development cycle.
+              </p>
+              <p class="target-line">
+                <strong>Target audience:</strong> ERP researchers at any career stage, including researchers new
+                to ERP who are still in training and willing to describe a published study of their choice. No
+                prior experience with ARTEM-IS is required.
+              </p>
+              <p class="tag-line">Tags: ARTEM-IS . EEG . ERP . usability . standards . reporting</p>
+              <div class="programme-links" aria-label="Resources for the ARTEM-IS stress-testing Hacktrack">
+                <a class="programme-link" href="https://artemis.incf.org/" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Tool</span><span class="programme-link-target">ARTEM-IS web application</span>
+                </a>
+                <a class="programme-link" href="https://onlinelibrary.wiley.com/doi/10.1111/psyp.70187" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Paper</span><span class="programme-link-target">Psychophysiology, 2024</span>
+                </a>
+              </div>
+            </article>
+          </article>
+
+          <article class="programme-block programme-wg2" id="wg2">
+            <header class="programme-block-head">
+              <p class="block-kicker">EEG101 . Working Group 2</p>
+              <h3>Curating legacy resting-state EEG with RS-BIDSify</h3>
+              <p>
+                EEG101 Working Group 2 organises four specialised events at OHBM BrainHack 2026 around
+                <strong>RS-BIDSify</strong>, an alpha-stage tool developed as part of the #EEGManyLabs initiative
+                to automate the conversion of resting-state EEG recordings and metadata into BIDS-compliant
+                structures. Together they form a tutorial, a debate, an open-source clinic, and a collaboration
+                planning session.
+              </p>
+              <p class="tutor-line"><strong>WG2 lead:</strong> Mahnaz Arvaneh (University of Sheffield) . <strong>Co-leads:</strong> Xun He (Bournemouth University), Claudio Babiloni (Sapienza University of Rome)</p>
+            </header>
+
+            <article id="session-rsbidsify" class="programme-card">
+              <div class="programme-meta">
+                <span>Friday, June 12 . 17:00 - 18:30 . Room 2</span>
+                <span>EEG101 . WG2 workshop . mini-hackathon</span>
+              </div>
+              <h3>Curating legacy resting-state EEG datasets using RS-BIDSify</h3>
+              <p class="tutor-line"><strong>Leads:</strong> RS-BIDSify team (#EEGManyLabs initiative) with EEG101 WG2 (Mahnaz Arvaneh, Xun He, Claudio Babiloni)</p>
+              <p>
+                Aligning EEG data formats across datasets and with those typically used by MRI and other
+                neuroimaging data is crucial for EEG and multimodal data curation. Standardising legacy EEG data
+                into BIDS format is often the biggest hurdle to large-scale meta-science. This workshop introduces
+                RS-BIDSify, designed to automate the conversion of resting-state EEG recordings and metadata into
+                BIDS-compliant structures.
+              </p>
+              <p>
+                After a short technical presentation on the pipeline's workflow, participants transition into a
+                practical trial session. They can bring their own datasets or work with provided examples, and
+                spend the session navigating the BIDSification process from start to finish. The team is looking
+                for &quot;beta-testers&quot; to help break the tool, find the common data quirks the pipeline
+                cannot handle yet, and identify where the documentation needs more clarity.
+              </p>
+              <p class="target-line">
+                <strong>Target audience:</strong> researchers interested in EEG data curation workflows in
+                alignment with multimodal and large-scale neuroimaging data storage and sharing.
+              </p>
+              <p class="tag-line">Tags: BIDS . data curation . EEG . reproducibility . neuroimaging . resting state</p>
+              <div class="programme-links" aria-label="Resources for the RS-BIDSify workshop">
+                <a class="programme-link" href="https://github.com/ubdbra001/rs-bidsify" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Repo</span><span class="programme-link-target">ubdbra001/rs-bidsify</span>
+                </a>
+                <a class="programme-link" href="https://eegmanylabs.org/" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Initiative</span><span class="programme-link-target">#EEGManyLabs</span>
+                </a>
+                <a class="programme-link" href="https://bids.neuroimaging.io" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Standard</span><span class="programme-link-target">BIDS</span>
+                </a>
+              </div>
+            </article>
+
+            <article id="session-debate" class="programme-card">
+              <div class="programme-meta">
+                <span>Saturday, June 13 . 10:30 - 12:00 . Room 2</span>
+                <span>EEG101 . WG2 discussion</span>
+              </div>
+              <h3>Harmonisation and standardisation in EEG research: community debate and discussion</h3>
+              <p class="tutor-line"><strong>Facilitators:</strong> EEG101 WG2 (Mahnaz Arvaneh, Xun He, Claudio Babiloni)</p>
+              <p>
+                An interactive session exploring the opportunities, challenges, and risks associated with EEG
+                dataset harmonisation and processing standardisation. The session includes a short framing talk,
+                a pre-session survey, a structured debate, and a focus-group discussion to identify key barriers,
+                priorities, and community-driven recommendations.
+              </p>
+              <p class="tag-line">Tags: EEG . harmonisation . standardisation . community . debate</p>
+              <div class="programme-links" aria-label="Resources for the harmonisation debate">
+                <a class="programme-link" href="https://eeg101.eu/working-groups" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Group</span><span class="programme-link-target">EEG101 WG2</span>
+                </a>
+                <a class="programme-link" href="https://github.com/ubdbra001/rs-bidsify" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Repo</span><span class="programme-link-target">ubdbra001/rs-bidsify</span>
+                </a>
+                <a class="programme-link" href="https://ancplaboldenburg.github.io/bids_manager_documentation/" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Tool</span><span class="programme-link-target">BIDS Manager</span>
+                </a>
+              </div>
+            </article>
+
+            <article id="hacktrack-rsbidsify-clinic" class="programme-card">
+              <div class="programme-meta">
+                <span>Scheduled with WG2 sessions</span>
+                <span>EEG101 . WG2 clinic</span>
+              </div>
+              <h3>Open collaboration and pipeline development clinic</h3>
+              <p class="tutor-line"><strong>Facilitators:</strong> EEG101 WG2 with RS-BIDSify maintainers</p>
+              <p>
+                A collaborative hands-on session focused on consolidating feedback on the RS-BIDSify pipeline,
+                addressing GitHub issues, discussing implementation challenges, and supporting community-driven
+                improvements to the workflow and documentation.
+              </p>
+              <p class="tag-line">Tags: RS-BIDSify . open source . pipeline . clinic . community contributions</p>
+              <div class="programme-links" aria-label="Resources for the RS-BIDSify clinic">
+                <a class="programme-link" href="https://github.com/ubdbra001/rs-bidsify" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Repo</span><span class="programme-link-target">ubdbra001/rs-bidsify</span>
+                </a>
+                <a class="programme-link" href="https://github.com/ubdbra001/rs-bidsify/issues" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Issues</span><span class="programme-link-target">Open tickets</span>
+                </a>
+              </div>
+            </article>
+
+            <article id="hacktrack-rsbidsify-outputs" class="programme-card">
+              <div class="programme-meta">
+                <span>Scheduled with WG2 sessions</span>
+                <span>EEG101 . WG2 planning</span>
+              </div>
+              <h3>Building shared outputs and future collaboration planning</h3>
+              <p class="tutor-line"><strong>Facilitators:</strong> EEG101 WG2 (Mahnaz Arvaneh, Xun He, Claudio Babiloni)</p>
+              <p>
+                A session dedicated to developing shared outputs from the workshop activities: drafting a paper
+                skeleton or summary report, identifying contributors, coordinating next steps, and planning
+                future collaborative activities and dissemination efforts.
+              </p>
+              <p class="tag-line">Tags: collaboration . outputs . planning . community</p>
+              <div class="programme-links" aria-label="Resources for the shared-outputs session">
+                <a class="programme-link" href="https://eeg101.eu/working-groups" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Group</span><span class="programme-link-target">EEG101 WG2</span>
+                </a>
+                <a class="programme-link" href="https://github.com/ubdbra001/rs-bidsify" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Repo</span><span class="programme-link-target">ubdbra001/rs-bidsify</span>
+                </a>
+              </div>
+            </article>
+          </article>
+
+          <article class="programme-block programme-wg3" id="wg3">
+            <header class="programme-block-head">
+              <p class="block-kicker">EEG101 . Working Group 3</p>
+              <h3>EEG Community Framework: rigor, democratisation, sustainability</h3>
+              <p>
+                The EEG101 Community Framework (CF) features four specialised events at OHBM BrainHack 2026: an
+                introductory TrainTrack on Friday, an Ambassador TrainTrack on Saturday, a gamification
+                Hacktrack, and a stakeholder-mapping Hacktrack.
+              </p>
+              <p class="tutor-line"><strong>WG3 lead:</strong> Maximilien Chaumon (Paris Brain Institute) . <strong>Co-lead:</strong> Alexandra Corneyllie (Lyon Neuroscience Research Center)</p>
+            </header>
+
+            <article id="session-cf-intro" class="programme-card">
+              <div class="programme-meta">
+                <span>Friday, June 12 . 17:00 - 18:30 . Room 1</span>
+                <span>EEG101 . WG3 TrainTrack</span>
+              </div>
+              <h3>Community Framework introduction TrainTrack</h3>
+              <p class="tutor-line"><strong>Leads:</strong> Maximilien Chaumon and Alexandra Corneyllie (EEG101 WG3)</p>
+              <p>
+                Discover and discuss the principles of the <a href="https://linktr.ee/eegcf" target="_blank" rel="noopener noreferrer">EEG Community Framework</a>:
+                Scientific Rigor, Democratization, and Sustainability. Evaluate their current implementation
+                status in contemporary labs and identify where the framework can support better practice.
+              </p>
+              <p class="tag-line">Tags: EEG . community framework . open science . rigor . sustainability</p>
+              <div class="programme-links" aria-label="Resources for the Community Framework introduction">
+                <a class="programme-link" href="https://linktr.ee/eegcf" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Hub</span><span class="programme-link-target">EEG Community Framework</span>
+                </a>
+                <a class="programme-link" href="https://eeg101.eu/working-groups" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Group</span><span class="programme-link-target">EEG101 WG3</span>
+                </a>
+              </div>
+            </article>
+
+            <article id="session-ambassador" class="programme-card">
+              <div class="programme-meta">
+                <span>Saturday, June 13 . 10:30 - 12:00 . Room 1</span>
+                <span>EEG101 . WG3 TrainTrack</span>
+              </div>
+              <h3>Ambassador TrainTrack</h3>
+              <p class="tutor-line"><strong>Leads:</strong> Maximilien Chaumon and Alexandra Corneyllie (EEG101 WG3)</p>
+              <p>
+                Design strategic tools and tactics needed to advocate for the EEG Community Framework and drive
+                ethical, open science forward. The session focuses on the practical work of ambassadors who will
+                carry CF principles back to their labs, institutions, and networks.
+              </p>
+              <p class="tag-line">Tags: EEG . community framework . advocacy . ambassadors . open science</p>
+              <div class="programme-links" aria-label="Resources for the Ambassador TrainTrack">
+                <a class="programme-link" href="https://linktr.ee/eegcf" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Hub</span><span class="programme-link-target">EEG Community Framework</span>
+                </a>
+                <a class="programme-link" href="https://eeg101.eu/working-groups" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Group</span><span class="programme-link-target">EEG101 WG3</span>
+                </a>
+              </div>
+            </article>
+
+            <article id="hacktrack-gamification" class="programme-card programme-hacktrack">
+              <div class="programme-meta">
+                <span>Hacktrack . 3 days (June 11 to 13)</span>
+                <span>EEG101 . WG3</span>
+                <span>Hybrid: Bordeaux, Europe/Middle East/Africa</span>
+              </div>
+              <h3>Community Framework: teaching and gamification brainstorm</h3>
+              <p class="tutor-line"><strong>Project leads:</strong> Maximilien Chaumon and Alexandra Corneyllie</p>
+              <p>
+                Testing and improving good scientific practices in a virtual world. The game takes place in a
+                virtual world powered by the open-source <a href="https://workadventu.re" target="_blank" rel="noopener noreferrer">WorkAdventure</a>
+                platform. Participants are taken to a mansion and challenged to BIDSify their data, share it
+                openly with the scientific community, publish in the right assets, and more. Join the team
+                developing it, suggest ideas, scenarios, and have fun learning brain imaging. This is the first
+                appearance of a new learning/teaching trend.
+              </p>
+              <p class="target-line">
+                <strong>Skills welcome:</strong> experience of good scientific practice in neuroimaging, open
+                spirit, sense of observation, sense of humor.
+              </p>
+              <p class="tag-line">Tags: EEG . community framework . gamification . teaching . serious games . WorkAdventure</p>
+              <div class="programme-links" aria-label="Resources for the gamification Hacktrack">
+                <a class="programme-link" href="https://linktr.ee/eegcf" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Hub</span><span class="programme-link-target">EEG Community Framework</span>
+                </a>
+                <a class="programme-link" href="https://workadventu.re" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Tool</span><span class="programme-link-target">WorkAdventure</span>
+                </a>
+                <a class="programme-link" href="https://github.com/ohbm/hackathon2026/issues/29" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">OHBM</span><span class="programme-link-target">Hacktrack #29</span>
+                </a>
+              </div>
+            </article>
+
+            <article id="hacktrack-stakeholders" class="programme-card programme-hacktrack">
+              <div class="programme-meta">
+                <span>Hacktrack . 3 days (June 11 to 13)</span>
+                <span>EEG101 . WG3</span>
+                <span>Bordeaux</span>
+              </div>
+              <h3>Community Framework: stakeholder mapping</h3>
+              <p class="tutor-line"><strong>Project leads:</strong> Maximilien Chaumon and Alexandra Corneyllie</p>
+              <p>
+                Together, let's chart the European EEG landscape by connecting researchers, industry, funders,
+                regulators, and publishers to advance more open, rigorous, and sustainable EEG science through
+                the EEG Community Framework.
+              </p>
+              <p class="target-line">
+                <strong>Skills welcome:</strong> stakeholder mapping, networking, community building, systems
+                thinking, strategic outreach, and ethical science advocacy.
+              </p>
+              <p class="tag-line">Tags: EEG . community framework . stakeholder mapping . advocacy . ecosystems</p>
+              <div class="programme-links" aria-label="Resources for the stakeholder-mapping Hacktrack">
+                <a class="programme-link" href="https://linktr.ee/eegcf" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">Hub</span><span class="programme-link-target">EEG Community Framework</span>
+                </a>
+                <a class="programme-link" href="https://github.com/ohbm/hackathon2026/issues/31" target="_blank" rel="noopener noreferrer">
+                  <span class="programme-link-kind">OHBM</span><span class="programme-link-target">Hacktrack #31</span>
+                </a>
+              </div>
+            </article>
+          </article>
+
+          <aside id="cost-note" class="cost-action-note" aria-label="EEG101 membership notice">
             <p>
-              Participants will see how a software-guided workflow moves from raw folders to a proposed BIDS structure:
-              metadata scan, curation table, suffix mapping, filters, repeat handling, preview tree, conversion run, and
-              post-conversion dataset inspection.
+              <strong>Important notice:</strong> if you want to participate in the EEG101 sessions you must join
+              the EEG101 COST Action. See <a href="https://eeg101.eu/" target="_blank" rel="noopener noreferrer">eeg101.eu</a>
+              for how to sign up.
             </p>
-            <h4>Learning objectives</h4>
-            <ul>
-              <li>Understand the difference between manual BIDS organization and software-guided multimodal conversion.</li>
-              <li>Recognize the main acquisition and metadata problems BIDS Manager exposes before conversion.</li>
-              <li>Follow the core scan, curate, preview, convert, and inspect workflow.</li>
-              <li>See why a conversion tool with pre-conversion feedback is valuable for reproducible data sharing.</li>
-            </ul>
-            <p class="target-line">
-              <strong>Target audience:</strong> Participants who want a concise introduction to BIDS Manager without the
-              deeper hands-on component.
-            </p>
-            <p class="tag-line">Tags: BIDS · raw-to-BIDS · conversion · curation · metadata · MRI · MEG · EEG · reproducibility</p>
-          </article>
-          </div>
-        </div>
-
-        <article class="programme-card">
-          <div class="programme-meta">
-            <span>June 12th afternoon</span>
-            <span>Workshop / practical session</span>
-            <span>Duration to be confirmed</span>
-          </div>
-          <h3>MEEGqc workshop: reproducible EEG and MEG quality assessment and quality control</h3>
-          <p class="tutor-line"><strong>Tutors:</strong> Dr. Karel López Vilaret and Dr. Jorge F. Bosch-Bayard</p>
-          <p class="programme-pitch">
-            Short description: A practical introduction to MEEGqc, a BIDS-aligned toolbox for reproducible EEG and MEG
-            quality assessment, persistent quality derivatives, interactive reports, group-level summaries, and explicit
-            quality-control decision support.
-          </p>
-          <p class="programme-summary">
-            EEG and MEG quality handling is often treated as a local visual inspection step: one person checks traces,
-            another person applies thresholds, and the evidence behind those choices is difficult to compare or reuse.
-            This session focuses on how to make that evidence explicit before exclusion, interpolation, or cleaning
-            decisions are made.
-          </p>
-          <p>
-            MEEGqc is introduced as a practical response to that reproducibility gap. The workshop separates quality
-            assessment from quality control. Quality assessment measures what is present in the data: signal variability,
-            peak-to-peak excursions, spectral burden, ECG and EOG contamination, muscle artifacts, stimulus/event
-            consistency, and MEG head motion when available. Quality control uses those measurements to support traceable
-            decisions through metric summaries, configurable criteria, quality reports, and auditable outputs.
-          </p>
-          <p>
-            Participants will see how MEEGqc computes metrics from BIDS datasets, stores machine-readable derivatives,
-            generates interactive subject reports, supports group and multi-sample comparisons, and keeps GUI, CLI, and
-            programmatic execution aligned through the same backend workflow.
-          </p>
-          <h4>Learning objectives</h4>
-          <ul>
-            <li>Distinguish quality assessment from quality control in EEG and MEG workflows.</li>
-            <li>Understand the main MEEGqc metric families: STD, PtP, PSD, ECG, EOG, muscle, stimulus, and head motion.</li>
-            <li>Interpret interactive reports, machine-readable derivatives, JSON/TSV summaries, and group-level outputs.</li>
-            <li>See how persistent quality evidence improves reproducibility, cohort screening, and downstream decisions.</li>
-            <li>Understand why MEEGqc complements BIDS Manager in a complete raw-data-to-quality-evidence workflow.</li>
-          </ul>
-          <p class="target-line">
-            <strong>Target audience:</strong> Participants interested in transparent, scalable, and reproducible quality
-            assessment and quality-control workflows for EEG and MEG data.
-          </p>
-          <p class="tag-line">Tags: quality assessment · quality control · EEG · MEG · M/EEG · BIDS derivatives · HTML reports · automated metrics · reproducibility</p>
-        </article>
-      </section>
-
-      <section class="workflow-section" aria-labelledby="workflow-title">
-        <div class="section-heading compact">
-          <p class="section-kicker">Coherent workflow</p>
-          <h2 id="workflow-title">One reproducibility chain</h2>
-        </div>
-        <div class="workflow">
-          <div class="workflow-step">
-            <span>1</span>
-            <h3>Inspect raw acquisition</h3>
-            <p>See subjects, sessions, sequences, file counts, repeats, timing, and organization before conversion.</p>
-          </div>
-          <div class="workflow-step">
-            <span>2</span>
-            <h3>Curate into BIDS</h3>
-            <p>Review metadata, adjust naming, exclude irrelevant sequences, preview the tree, and convert with context.</p>
-          </div>
-          <div class="workflow-step">
-            <span>3</span>
-            <h3>Run reproducible quality assessment and quality control</h3>
-            <p>Generate metrics, reports, derivatives, group summaries, and transparent quality-control evidence.</p>
-          </div>
+          </aside>
         </div>
       </section>
 
-      <section id="bids-manager" class="tool-section tool-bids" aria-labelledby="bids-title">
-        <div class="section-heading tool-heading">
-          <img class="tool-logo bids-logo" src="assets/bids-manager/software-logo.png" alt="BIDS Manager logo">
-          <div>
-            <p class="section-kicker">Multimodal raw-to-BIDS conversion and curation software</p>
-            <h2 id="bids-title">BIDS Manager converts MRI, MEG, and EEG data after showing what needs curation</h2>
-            <p>
-              BIDS Manager is a graphical multimodal raw-to-BIDS conversion tool and curation environment for MRI, MEG,
-              and EEG workflows. It scans raw acquisitions, exposes their organization and metadata before conversion,
-              lets users correct BIDS-relevant decisions, builds conversion heuristics, previews the planned BIDS dataset,
-              runs conversion, and then supports post-conversion metadata and imaging review.
+      <!-- ============================ LINKS ============================ -->
+      <section id="links" class="page-view page-view-links" data-page-view="links" hidden aria-labelledby="links-title">
+        <div class="links-section">
+          <div class="container">
+            <p class="section-kicker">Software and documentation</p>
+            <h2 id="links-title">Links</h2>
+            <p class="section-lead">
+              Quick access to the COST Action websites, the OHBM BrainHack page, the software repositories and
+              their documentation, and the standards and projects referenced in the programme.
             </p>
+
+            <div class="link-category" id="links-events">
+              <h3 class="link-category-title">Events and host organisations</h3>
+              <div class="link-grid">
+                <a class="resource-link resource-link-icon" href="https://ohbm.github.io/hackathon2026/" target="_blank" rel="noopener noreferrer">
+                  <div class="resource-link-glyph" aria-hidden="true">BH</div>
+                  <div>
+                    <span>OHBM BrainHack 2026</span>
+                    <strong>ohbm.github.io/hackathon2026</strong>
+                  </div>
+                </a>
+                <a class="resource-link resource-link-logo" href="https://www.indos-costaction.eu" target="_blank" rel="noopener noreferrer">
+                  <span class="resource-link-imgwrap">
+                    <img class="resource-link-img resource-link-img-brand theme-only-dark" src="assets/indos-logo-white.png" alt="INDoS logo">
+                    <img class="resource-link-img resource-link-img-brand theme-only-light" src="assets/indos-logo-black.png" alt="INDoS logo">
+                  </span>
+                  <div>
+                    <span>INDoS COST Action (CA24161)</span>
+                    <strong>indos-costaction.eu</strong>
+                  </div>
+                </a>
+                <a class="resource-link resource-link-logo" href="https://eeg101.eu/" target="_blank" rel="noopener noreferrer">
+                  <span class="resource-link-imgwrap">
+                    <img class="resource-link-img resource-link-img-brand theme-only-dark" src="assets/eeg101-logo-white.png" alt="EEG101 logo">
+                    <img class="resource-link-img resource-link-img-brand theme-only-light" src="assets/eeg101-logo-color.png" alt="EEG101 logo">
+                  </span>
+                  <div>
+                    <span>EEG101 COST Action</span>
+                    <strong>eeg101.eu</strong>
+                  </div>
+                </a>
+                <a class="resource-link resource-link-icon" href="https://linktr.ee/eegcf" target="_blank" rel="noopener noreferrer">
+                  <div class="resource-link-glyph" aria-hidden="true">CF</div>
+                  <div>
+                    <span>EEG Community Framework</span>
+                    <strong>linktr.ee/eegcf</strong>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="link-category" id="links-software">
+              <h3 class="link-category-title">Software websites</h3>
+              <div class="link-grid">
+                <a class="resource-link resource-link-logo" href="https://ancplaboldenburg.github.io/bids_manager_documentation/" target="_blank" rel="noopener noreferrer">
+                  <img class="resource-link-img resource-link-img-app" src="assets/bids-manager/app-icon.png" alt="BIDS Manager app icon">
+                  <div>
+                    <span>BIDS Manager documentation</span>
+                    <strong>ancplaboldenburg.github.io/bids_manager_documentation</strong>
+                  </div>
+                </a>
+                <a class="resource-link resource-link-logo" href="https://ancplaboldenburg.github.io/megqc_documentation/" target="_blank" rel="noopener noreferrer">
+                  <img class="resource-link-img resource-link-img-app" src="assets/meegqc/app-icon.png" alt="MEEGqc app icon">
+                  <div>
+                    <span>MEEGqc documentation</span>
+                    <strong>ancplaboldenburg.github.io/megqc_documentation</strong>
+                  </div>
+                </a>
+                <a class="resource-link resource-link-icon" href="https://artemis.incf.org/" target="_blank" rel="noopener noreferrer">
+                  <div class="resource-link-glyph" aria-hidden="true">A</div>
+                  <div>
+                    <span>ARTEM-IS web application</span>
+                    <strong>artemis.incf.org</strong>
+                  </div>
+                </a>
+                <a class="resource-link resource-link-icon" href="https://bids.neuroimaging.io" target="_blank" rel="noopener noreferrer">
+                  <div class="resource-link-glyph" aria-hidden="true">B</div>
+                  <div>
+                    <span>BIDS standard</span>
+                    <strong>bids.neuroimaging.io</strong>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="link-category" id="links-repos">
+              <h3 class="link-category-title">Source code repositories</h3>
+              <div class="link-grid">
+                <a class="resource-link resource-link-logo" href="https://github.com/ANCPLabOldenburg/BIDS-Manager" target="_blank" rel="noopener noreferrer">
+                  <img class="resource-link-img resource-link-img-app" src="assets/bids-manager/app-icon.png" alt="BIDS Manager app icon">
+                  <div>
+                    <span>BIDS Manager (source)</span>
+                    <strong>github.com/ANCPLabOldenburg/BIDS-Manager</strong>
+                  </div>
+                </a>
+                <a class="resource-link resource-link-logo" href="https://github.com/ANCPLabOldenburg/MEGqc" target="_blank" rel="noopener noreferrer">
+                  <img class="resource-link-img resource-link-img-app" src="assets/meegqc/app-icon.png" alt="MEEGqc app icon">
+                  <div>
+                    <span>MEEGqc (source, package &quot;meg-qc&quot;)</span>
+                    <strong>github.com/ANCPLabOldenburg/MEGqc</strong>
+                  </div>
+                </a>
+                <a class="resource-link resource-link-icon" href="https://github.com/ubdbra001/rs-bidsify" target="_blank" rel="noopener noreferrer">
+                  <div class="resource-link-glyph" aria-hidden="true">RS</div>
+                  <div>
+                    <span>RS-BIDSify (source)</span>
+                    <strong>github.com/ubdbra001/rs-bidsify</strong>
+                  </div>
+                </a>
+                <a class="resource-link resource-link-icon" href="https://github.com/ohbm/hackathon2026" target="_blank" rel="noopener noreferrer">
+                  <div class="resource-link-glyph" aria-hidden="true">GH</div>
+                  <div>
+                    <span>OHBM BrainHack 2026 (source)</span>
+                    <strong>github.com/ohbm/hackathon2026</strong>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="feature-layout">
-          <figure class="media-frame large-media" data-title="BIDS Manager converter workspace" data-detail="The converter gives a single workspace for scanning raw DICOM folders, inspecting acquisition metadata, editing BIDS-relevant fields, configuring filters, previewing the final dataset tree, and launching conversion with a log trail.">
-            <img src="assets/bids-manager/gui-visual.png" alt="BIDS Manager GUI showing the converter interface">
-            <figcaption>BIDS Manager GUI: a software-guided workflow for reviewing raw data before conversion.</figcaption>
-          </figure>
-
-          <div class="feature-list" aria-label="BIDS Manager highlights">
-            <article class="feature-item">
-              <span class="feature-index">01</span>
-              <h3>Pre-conversion acquisition audit</h3>
-              <p>
-                BIDS Manager scans raw multimodal acquisitions into an inventory of studies, subjects, sessions, source
-                folders, sequence names, acquisition times, file counts, series identifiers, inferred modalities, and
-                proposed BIDS names before anything is converted.
-              </p>
-            </article>
-            <article class="feature-item">
-              <span class="feature-index">02</span>
-              <h3>Interactive curation controls</h3>
-              <p>
-                Users can correct subject labels and sessions, adapt the suffix dictionary to local protocols, apply
-                general or subject-specific filters, keep only the last repeated acquisitions, and exclude irrelevant
-                patterns without editing folders by hand.
-              </p>
-            </article>
-            <article class="feature-item">
-              <span class="feature-index">03</span>
-              <h3>Preview, convert, then inspect</h3>
-              <p>
-                BIDS Manager creates a conversion-ready plan, previews planned paths as text and tree views, runs the
-                conversion with live logs, and then supports metadata, JSON/TSV, graph, NIfTI, DICOM, and slice review.
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <div class="capability-grid" aria-label="BIDS Manager detailed capabilities">
-          <article>
-            <h3>Detect acquisition problems early</h3>
-            <p>Repeated runs, mixed sessions, ambiguous sequence names, inconsistent IDs, and unexpected file counts become visible before conversion, when they are still cheap to correct.</p>
-          </article>
-          <article>
-            <h3>Make curation decisions explicit</h3>
-            <p>Include/exclude choices, suffix mapping, naming corrections, and session decisions are handled in the interface rather than being scattered across manual notes and ad hoc scripts.</p>
-          </article>
-          <article>
-            <h3>Bridge conversion and dataset review</h3>
-            <p>BIDS Manager does not stop at conversion: it also provides dataset navigation, metadata editing, graph views, IntendedFor-oriented fieldmap handling, and visual inspection tools for multimodal BIDS-compliant datasets.</p>
-          </article>
-        </div>
-
-        <div class="media-strip dense-media" aria-label="BIDS Manager screenshots and animations">
-          <figure data-title="3D and visual inspection" data-detail="The editor adds visual inspection to the curation workflow, helping users look beyond folder names and check anatomical or imaging content inside BIDS datasets.">
-            <img src="assets/bids-manager/intro-3d.gif" alt="BIDS Manager 3D viewer animation">
-            <figcaption>3D and visual inspection tools</figcaption>
-          </figure>
-          <figure data-title="Scanned metadata inventory" data-detail="The scanned metadata table summarizes study labels, subject IDs, sessions, sequence names, proposed BIDS names, acquisition timing, repeats, modality inference, and file counts before conversion.">
-            <img src="assets/bids-manager/scanned-metadata.png" alt="BIDS Manager scanned metadata table">
-            <figcaption>Scanned metadata before conversion</figcaption>
-          </figure>
-          <figure data-title="General modality filter" data-detail="General filters organize detected acquisitions by BIDS sequence type so users can include, exclude, or review whole acquisition classes consistently.">
-            <img src="assets/bids-manager/filter-general.png" alt="BIDS Manager general filter view">
-            <figcaption>General modality filter</figcaption>
-          </figure>
-          <figure data-title="Specific acquisition structure" data-detail="Specific filters expose subject, session, and sequence-level structure, which is useful when only part of a dataset needs correction or exclusion.">
-            <img src="assets/bids-manager/filter-specific.png" alt="BIDS Manager specific filter view">
-            <figcaption>Subject/session/sequence structure</figcaption>
-          </figure>
-          <figure data-title="BIDS tree preview" data-detail="The preview tree shows the planned BIDS folders and filenames before conversion, making output structure review possible before irreversible downstream work begins.">
-            <img src="assets/bids-manager/preview-tree.png" alt="BIDS Manager preview tree">
-            <figcaption>BIDS tree preview</figcaption>
-          </figure>
-          <figure data-title="Metadata editing" data-detail="The editor gives direct access to BIDS metadata and tabular files so curation continues after conversion without leaving the software environment.">
-            <img src="assets/bids-manager/editor-metadata.png" alt="BIDS Manager metadata editor">
-            <figcaption>Metadata editing</figcaption>
-          </figure>
-          <figure data-title="JSON sidecar review" data-detail="JSON sidecars can be opened and reviewed in context, supporting transparent correction of metadata that downstream BIDS Apps depend on.">
-            <img src="assets/bids-manager/editor-json.png" alt="BIDS Manager JSON editor">
-            <figcaption>JSON sidecar review</figcaption>
-          </figure>
-          <figure data-title="Dataset graph view" data-detail="Graph views help users understand dataset structure and relationships visually, which is especially useful for complex or multimodal BIDS datasets.">
-            <img src="assets/bids-manager/editor-graph.png" alt="BIDS Manager graph view">
-            <figcaption>Dataset graph view</figcaption>
-          </figure>
-          <figure data-title="Interactive slice review" data-detail="Slice review helps catch visual problems in imaging data and keeps dataset inspection close to metadata and file-structure review.">
-            <img src="assets/bids-manager/slices.gif" alt="BIDS Manager slice viewer animation">
-            <figcaption>Interactive slice review</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section id="meegqc" class="tool-section tool-meegqc" aria-labelledby="meegqc-title">
-        <div class="section-heading tool-heading">
-          <img class="tool-logo meegqc-logo" src="assets/meegqc/software-logo.png" alt="MEEGqc logo">
-          <div>
-            <p class="section-kicker">MEG/EEG quality-assessment and control software</p>
-            <h2 id="meegqc-title">MEEGqc turns data quality into reusable evidence</h2>
-            <p>
-              MEEGqc is a BIDS-aligned toolbox for reproducible EEG and MEG quality assessment and quality control. It
-              first creates a persistent quality-assessment layer: metric derivatives, interactive subject reports,
-              group summaries, and multi-sample comparisons that describe the data without imposing pass/fail decisions.
-              On top of that descriptive layer, explicit quality-control criteria can be applied and audited.
-            </p>
-          </div>
-        </div>
-
-        <div class="feature-layout reverse">
-          <figure class="media-frame large-media" data-title="MEEGqc graphical workflow" data-detail="MEEGqc exposes the same reproducible quality assessment and quality-control pipeline through a GUI, command-line use, and programmatic workflows, making it practical for both training sessions and scalable dataset processing.">
-            <img src="assets/meegqc/gui-main-dark.png" alt="MEEGqc dark GUI main window">
-            <figcaption>MEEGqc GUI: the same quality assessment and quality-control logic can be used through graphical, command-line, and programmatic workflows.</figcaption>
-          </figure>
-
-          <div class="feature-list" aria-label="MEEGqc highlights">
-            <article class="feature-item">
-              <span class="feature-index">01</span>
-              <h3>Quality assessment: describe the signal</h3>
-              <p>
-                Quality assessment computes continuous descriptors: STD, peak-to-peak amplitude, PSD summaries,
-                ECG/EOG correlation magnitudes, high-frequency muscle-burden profiles, stimulus/event summaries, and
-                MEG head-motion summaries when available.
-              </p>
-            </article>
-            <article class="feature-item">
-              <span class="feature-index">02</span>
-              <h3>Quality control: apply explicit criteria</h3>
-              <p>
-                Quality control is the criterion-based layer: thresholds and configurable rules turn assessment metrics
-                into burden indicators, flags, rankings, exclusion candidates, or other documented decisions.
-              </p>
-            </article>
-            <article class="feature-item">
-              <span class="feature-index">03</span>
-              <h3>Reports, derivatives, and cohorts</h3>
-              <p>
-                MEEGqc writes interactive subject reports, machine-readable BIDS derivatives, JSON summaries, group
-                quality reports, and multi-sample comparisons so quality evidence can be reused and audited.
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <div class="capability-grid meegqc-capabilities" aria-label="MEEGqc detailed capabilities">
-          <article>
-            <h3>Quality assessment is measurement</h3>
-            <p>Quality assessment does not decide whether data are good or bad. It preserves multiscale measurements, distributions, quantiles, temporal footprints, spatial sensor patterns, spectral profiles, and physiological-coupling summaries as reusable evidence.</p>
-          </article>
-          <article>
-            <h3>Quality control is criteria-based</h3>
-            <p>Quality control starts after assessment: user-defined criteria from configuration files convert continuous measurements into traceable outcomes such as noisy/flat channel burdens, high-correlation burdens, muscle-event burdens, rankings, exclusions, or GQI attempts.</p>
-          </article>
-          <article>
-            <h3>MEG and EEG in one framework</h3>
-            <p>The workflow supports MEG, standalone EEG, and EEG channels embedded in MEG recordings, including BIDS channel-type correction, EEG montage handling, re-referencing, and EEG-specific muscle bands.</p>
-          </article>
-        </div>
-
-        <div class="media-strip dense-media" aria-label="MEEGqc screenshots and report examples">
-          <figure data-title="Light GUI workflow" data-detail="The GUI lowers the barrier for practical workshops while preserving the same underlying settings and reproducible processing logic used by command-line runs.">
-            <img src="assets/meegqc/gui-main-light.png" alt="MEEGqc light GUI main window">
-            <figcaption>GUI workflow</figcaption>
-          </figure>
-          <figure data-title="Report organization" data-detail="Interactive reports organize metrics into tabs, separating channel types and metric families so users can move from overview to evidence without losing context.">
-            <img src="assets/meegqc/report-tabs.gif" alt="MEEGqc report tabs">
-            <figcaption>Report organization</figcaption>
-          </figure>
-          <figure data-title="ECG coupling review" data-detail="ECG views describe channel-wise cardiac-coupling magnitudes and waveform relationships. QC criteria can later turn those continuous summaries into high-correlation burden indicators or review flags.">
-            <img src="assets/meegqc/ecg-highest.gif" alt="MEEGqc ECG affected channel report">
-            <figcaption>ECG coupling summaries</figcaption>
-          </figure>
-          <figure data-title="PSD inspection" data-detail="PSD reports expose frequency-domain quality problems such as line noise, narrowband interference, and broad spectral burden across channels.">
-            <img src="assets/meegqc/psd-welch.gif" alt="MEEGqc PSD Welch report">
-            <figcaption>PSD inspection</figcaption>
-          </figure>
-          <figure data-title="Sensor-level STD metrics" data-detail="Standard-deviation views reveal flat channels, noisy channels, and epoch-level instability, giving users a direct signal-variability profile before exclusion decisions.">
-            <img src="assets/meegqc/std-cap.gif" alt="MEEGqc standard deviation cap plot">
-            <figcaption>Sensor-level STD metrics</figcaption>
-          </figure>
-          <figure data-title="Group-level QA reports" data-detail="Group reports aggregate descriptive quality profiles across subjects, tasks, metrics, and channel types, making cohort distributions, quantiles, and systematic acquisition patterns easier to inspect before QC criteria are applied.">
-            <img src="assets/meegqc/group-summary.gif" alt="MEEGqc group summary report">
-            <figcaption>Group-level QA reports</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section id="links" class="links-section" aria-labelledby="links-title">
-        <div class="section-heading compact">
-          <p class="section-kicker">Software and documentation</p>
-          <h2 id="links-title">Open-source tools used in the TrainTrack and workshop</h2>
-        </div>
-        <div class="link-grid">
-          <a class="resource-link" href="https://github.com/ANCPLabOldenburg/BIDS-Manager" target="_blank" rel="noopener noreferrer">
-            <span>BIDS Manager repository</span>
-            <strong>github.com/ANCPLabOldenburg/BIDS-Manager</strong>
-          </a>
-          <a class="resource-link" href="https://ancplaboldenburg.github.io/bids_manager_documentation/" target="_blank" rel="noopener noreferrer">
-            <span>BIDS Manager documentation</span>
-            <strong>ancplaboldenburg.github.io/bids_manager_documentation</strong>
-          </a>
-          <a class="resource-link" href="https://github.com/ANCPLabOldenburg/MEGqc" target="_blank" rel="noopener noreferrer">
-            <span>MEEGqc repository</span>
-            <strong>github.com/ANCPLabOldenburg/MEGqc</strong>
-          </a>
-          <a class="resource-link" href="https://ancplaboldenburg.github.io/megqc_documentation/" target="_blank" rel="noopener noreferrer">
-            <span>MEEGqc documentation</span>
-            <strong>ancplaboldenburg.github.io/megqc_documentation</strong>
-          </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>INDoS and EEG101 TrainTrack and workshop · BIDS Manager · MEEGqc</p>
+      <p>INDoS and EEG101 at OHBM BrainHack Bordeaux 2026 . June 12 and 13</p>
       <a href="#top">Back to top</a>
     </footer>
 
