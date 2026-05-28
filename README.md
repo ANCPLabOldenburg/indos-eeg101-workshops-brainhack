@@ -8,7 +8,7 @@ single dependency-free HTML/CSS/JS bundle, designed to be deployed as
 GitHub Pages and linked from the OHBM BrainHack site, the INDoS COST
 Action site, and the EEG101 COST Action site.
 
-Live site: https://karellopez.github.io/indos-eeg101-workshops-brainhack/
+Live site: https://ancplaboldenburg.github.io/indos-eeg101-workshops-brainhack/
 
 ## What the page covers
 
