@@ -267,12 +267,12 @@ function initWorkflowGraph() {
 
   const spotlight = workflowGraph.querySelector(".workflow-spotlight");
   const nodes = [
-    { selector: ".raw-node",     x: 71,  y: 122 },
-    { selector: ".scan-node",    x: 246, y: 76 },
-    { selector: ".bids-node",    x: 355, y: 122 },
-    { selector: ".assess-node",  x: 525, y: 122 },
-    { selector: ".control-node", x: 664, y: 184 },
-    { selector: ".report-node",  x: 816, y: 122 },
+    { selector: ".acquire-node",   x: 71,  y: 122 },
+    { selector: ".artemis-node",   x: 246, y: 76 },
+    { selector: ".bids-node",      x: 355, y: 122 },
+    { selector: ".meegqc-node",    x: 525, y: 122 },
+    { selector: ".fair-node",      x: 664, y: 184 },
+    { selector: ".community-node", x: 816, y: 122 },
   ].map((n) => ({ ...n, element: workflowGraph.querySelector(n.selector) }));
 
   function highlightNearestNode(point) {

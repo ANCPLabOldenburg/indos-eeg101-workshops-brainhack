@@ -460,11 +460,11 @@ body::before {
   stroke: rgba(255, 255, 255, 0.98);
   stroke-width: 2.8;
 }
-.workflow-graph .scan-node    { animation-delay: 0.35s; }
-.workflow-graph .bids-node    { animation-delay: 0.70s; }
-.workflow-graph .assess-node  { animation-delay: 1.05s; }
-.workflow-graph .control-node { animation-delay: 1.40s; }
-.workflow-graph .report-node  { animation-delay: 1.75s; }
+.workflow-graph .artemis-node    { animation-delay: 0.35s; }
+.workflow-graph .bids-node       { animation-delay: 0.70s; }
+.workflow-graph .meegqc-node     { animation-delay: 1.05s; }
+.workflow-graph .fair-node       { animation-delay: 1.40s; }
+.workflow-graph .community-node  { animation-delay: 1.75s; }
 
 .workflow-graph .workflow-node text {
   fill: #f4f7fb;

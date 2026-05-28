@@ -50,7 +50,7 @@
           </div>
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <svg class="workflow-animation workflow-graph" viewBox="0 0 880 230" role="button" tabindex="0" aria-label="Raw multimodal data to BIDS conversion, quality assessment, quality control, and reports. Click to highlight the workflow node by node.">
+            <svg class="workflow-animation workflow-graph" viewBox="0 0 880 230" role="button" tabindex="0" aria-label="From raw acquisition to community impact: Acquire raw data, Report with ARTEM-IS, Curate with BIDS, Quality with MEEGqc, Share via FAIR, Community via the EEG Community Framework. Click to highlight the workflow node by node.">
               <defs>
                 <filter id="workflow-node-glow" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
                   <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#b8f46d" flood-opacity="0.72"></feDropShadow>
@@ -88,29 +88,29 @@
                 <circle cx="476" cy="54" r="5"></circle>
                 <circle cx="416" cy="78" r="5"></circle>
               </g>
-              <g class="workflow-node raw-node" transform="translate(38 78)">
-                <path class="node-icon" d="M4 16 h58 v52 H4z M4 16 l11 -12 h58 l-11 12 M16 32 h32 M16 46 h24"></path>
-                <text x="33" y="92"><tspan x="33">Raw multimodal</tspan><tspan x="33" dy="15">data</tspan></text>
+              <g class="workflow-node acquire-node" transform="translate(38 78)">
+                <path class="node-icon" d="M4 14 h58 v52 H4z M14 40 q5 -12 10 0 t10 0 t10 0 t10 0 M16 0 v10 M50 0 v10 M13 2 a3 3 0 1 0 0.01 0 M47 2 a3 3 0 1 0 0.01 0"></path>
+                <text x="33" y="92"><tspan x="33">Acquire</tspan><tspan x="33" dy="15">Raw data</tspan></text>
               </g>
-              <g class="workflow-node scan-node" transform="translate(212 28)">
-                <path class="node-icon" d="M0 8 h68 v54 H0z M11 23 h44 M11 36 h30 M11 49 h36 M52 47 l12 12 M56 41 a12 12 0 1 0 -1 0"></path>
-                <text x="34" y="90">Scan and inspect</text>
+              <g class="workflow-node artemis-node" transform="translate(212 28)">
+                <path class="node-icon" d="M22 0 h24 v8 h-24z M0 4 h68 v58 H0z M10 22 h6 v6 h-6z M22 25 h28 M10 36 h6 v6 h-6z M22 39 h28 M10 50 h6 v6 h-6z M22 53 h22"></path>
+                <text x="34" y="90"><tspan x="34">Report</tspan><tspan x="34" dy="15">ARTEM-IS</tspan></text>
               </g>
               <g class="workflow-node bids-node" transform="translate(320 78)">
-                <path class="node-icon" d="M3 6 h64 v62 H3z M15 23 h38 M15 37 h38 M15 51 h27 M0 68 h70"></path>
-                <text x="35" y="96">BIDS conversion</text>
+                <path class="node-icon" d="M0 8 h22 l4 -6 h40 v60 H0z M14 26 v32 M14 36 h14 M14 46 h14 M14 56 h14"></path>
+                <text x="35" y="96"><tspan x="35">Curate</tspan><tspan x="35" dy="15">BIDS</tspan></text>
               </g>
-              <g class="workflow-node assess-node" transform="translate(490 78)">
-                <path class="node-icon" d="M5 58 C17 17 50 17 62 58 M14 58 C27 40 41 40 53 58 M34 58 v-42 M19 24 l15 -13 l15 13"></path>
-                <text x="35" y="92"><tspan x="35">Quality assessment</tspan><tspan x="35" dy="15">Measure</tspan></text>
+              <g class="workflow-node meegqc-node" transform="translate(490 78)">
+                <path class="node-icon" d="M5 58 a30 30 0 1 1 60 0 M35 58 l-14 -22 M11 48 l3 -3 M58 48 l-3 -3 M35 26 v4 M33 56 a2 2 0 1 0 0.01 0"></path>
+                <text x="35" y="92"><tspan x="35">Quality</tspan><tspan x="35" dy="15">MEEGqc</tspan></text>
               </g>
-              <g class="workflow-node control-node" transform="translate(630 136)">
-                <path class="node-icon" d="M4 8 h60 v52 H4z M17 25 l10 10 l23 -24 M17 47 h34"></path>
-                <text x="34" y="84"><tspan x="34">Quality control</tspan><tspan x="34" dy="15">Decision</tspan></text>
+              <g class="workflow-node fair-node" transform="translate(630 136)">
+                <path class="node-icon" d="M14 38 a10 10 0 0 1 -1 -20 a12 12 0 0 1 22 -2 a10 10 0 0 1 14 14 a8 8 0 0 1 -8 8 z M32 58 v-22 M24 44 l8 -8 l8 8"></path>
+                <text x="34" y="84"><tspan x="34">Share</tspan><tspan x="34" dy="15">FAIR</tspan></text>
               </g>
-              <g class="workflow-node report-node" transform="translate(786 78)">
-                <path class="node-icon" d="M0 0 h60 v68 H0z M13 17 h34 M13 32 h28 M13 47 h34 M43 0 v17 h17"></path>
-                <text x="30" y="96">Reports</text>
+              <g class="workflow-node community-node" transform="translate(786 78)">
+                <path class="node-icon" d="M35 14 L12 54 L58 54 Z M30 14 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0 M7 54 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0 M53 54 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0"></path>
+                <text x="30" y="96"><tspan x="30">Community</tspan><tspan x="30" dy="15">CF</tspan></text>
               </g>
               <circle class="travel-dot dot-main" r="5" filter="url(#workflow-dot-glow)"></circle>
               <circle class="travel-dot dot-audit" r="4" filter="url(#workflow-dot-glow)"></circle>
