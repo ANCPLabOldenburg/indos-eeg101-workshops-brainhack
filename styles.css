@@ -472,7 +472,14 @@ body::before {
   font-weight: 700;
   text-anchor: middle;
 }
+/* Tool / sub-label tspans use the accent colour so the action verb on
+   the first line stays distinct from the tool name(s) below. */
+.workflow-graph .workflow-node text tspan:not(:first-child) {
+  fill: var(--accent);
+  font-weight: 800;
+}
 [data-theme="light"] .workflow-graph .workflow-node text { fill: var(--text); }
+[data-theme="light"] .workflow-graph .workflow-node text tspan:not(:first-child) { fill: var(--accent-strong); }
 [data-theme="light"] .workflow-graph .node-icon { fill: rgba(255, 255, 255, 0.72); stroke: rgba(18, 23, 32, 0.9); }
 
 .workflow-mini-graph path { fill: none; stroke: rgba(189, 166, 255, 0.74); stroke-width: 2; }

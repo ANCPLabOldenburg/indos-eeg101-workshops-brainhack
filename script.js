@@ -271,7 +271,7 @@ function initWorkflowGraph() {
     { selector: ".artemis-node",   x: 246, y: 76 },
     { selector: ".bids-node",      x: 355, y: 122 },
     { selector: ".meegqc-node",    x: 525, y: 122 },
-    { selector: ".fair-node",      x: 664, y: 184 },
+    { selector: ".fair-node",      x: 664, y: 76 },
     { selector: ".community-node", x: 816, y: 122 },
   ].map((n) => ({ ...n, element: workflowGraph.querySelector(n.selector) }));
 
