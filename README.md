@@ -107,10 +107,3 @@ indos-eeg101-workshops-brainhack/
 | RS-BIDSify | https://github.com/ubdbra001/rs-bidsify |
 | #EEGManyLabs | https://eegmanylabs.org/ |
 | BIDS standard | https://bids.neuroimaging.io |
-
-## Style notes (for future edits)
-
-- No em dashes or en dashes anywhere in user-facing copy; use periods, colons, or hyphens.
-- British English throughout (harmonisation, standardisation, organise, specialised), with one deliberate exception: the WG3 pillar phrase "Scientific Rigor, Democratization, and Sustainability" is kept verbatim as the official Community Framework wording.
-- The "." character is used as the inline bullet separator (`Bordeaux . June 12 and 13`, `EEG101 . WG1`, etc.).
-- `RS-BIDSify` is the user-facing capitalisation; GitHub URLs stay lowercase (`ubdbra001/rs-bidsify`).
